@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let obj={
+        age:18,
+        sex:'未知',  //0 1 2
+        name:'赵六',
+    }
+    //let str='我是'+obj.name+'我的'++'年龄'+obj.age
+    //es6 字符串模板
+    let str=`我是${obj.name}我的年龄${obj.age} 我的性别${obj.sex}`;
+    console.log(str);
+    //判断字符串中是否含有对应内容
+    console.log(str.includes('年龄2'));
+    // 判断以什么开头 以什么结尾
+    let url='https://www.baidu.com'
+    //startsWith 一般判断是什么协议
+    console.log(url.startsWith('https'));
+    //判断文件后缀
+    let file='C:\\Users\\j\\Desktop\\nodeT\\day01\\demo\\app.js';
+    console.log(file.endsWith('.js'));
+</script>
+</body>
+</html>

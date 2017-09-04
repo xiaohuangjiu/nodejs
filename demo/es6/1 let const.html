@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1.变量（可以任意改变的值） 常量（可以不可改变的值）
+    var  a=100;
+    console.log(a = 3000);
+    let  let1=200;    //变量
+    let1='变量';
+    console.log(let1);
+    //常量
+    const pi=3.1415926;
+    console.log(pi);
+    //常量不可以修改,但是常量如果是一个对象这个时候常量中的内容是可以修改
+    //console.log(pi = 400);
+    const obj={
+        age:18,
+        name:'小明'
+    };
+    obj.age=32;
+   // console.log(obj = 3000);
+    //es6 let const 都有独立作用域
+    console.log(obj.age);
+    let name='张三';
+    for(var i=0;i<10;i++){
+        let name='赵四'
+        console.log(name);
+    }
+    console.log(name);
+
+</script>
+</body>
+</html>

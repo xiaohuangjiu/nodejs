@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // for foreach map filter some every
+    let arr=[1,2,3,4,5,6,7,8];
+    //for foreach 只能单纯的循环 无返回值
+   // console.log(arr.forEach(i => i));
+    //map
+    // 1. 循环 可以对原有数组进行处理，
+    // 2. 处理完成以后返回新的数组，原有的数组不会进行任何修改
+    // 3. 在做遍历时可以对值进行修改，可以过滤数据（过滤不出的数据用undefined表示）
+   console.log(arr.map(i => i+100));
+    //filter
+    // 1. 循环 可以对原有数组进行处理，
+    // 2. 处理完成以后返回新的数组，原有的数组不会进行任何修改
+    // 3. 在做遍历时不能修改返回数据，可以过滤数据
+    console.log(arr.filter(i =>{
+            if(i>4){
+                return i
+            }
+        }));
+    //some 和 every 返回的是布尔值 some表示有一个满足条件即可 every表示所有条件满足既可
+    console.log(arr.some(i =>{
+            if(i>10){
+                return i
+            }
+        }));
+    console.log(arr.every(i =>{
+            if(i>0){
+                return i
+            }
+        }));
+
+</script>
+</body>
+</html>

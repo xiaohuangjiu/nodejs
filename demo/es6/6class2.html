@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Person 类
+   class Person{
+       constructor(_text){
+           //属性
+           this.text=_text;
+       }
+       getName(){
+           return this.text
+       }
+   }
+   class SZ extends Person{
+
+       constructor(_text){
+           //2 通过super将参数传递给父类
+           super(_text);
+           //1.这种方式是由子类覆盖掉父类
+           // this.text='覆盖传参数'
+       }
+       getName(){
+           return '我不是父类方法'
+       }
+   }
+   let sz=new SZ('由传递参数');
+    console.log(sz.getName());
+
+    //fetch  promise
+
+</script>
+</body>
+</html>

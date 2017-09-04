@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //es 6 语法 class类
+    class Person{
+        //构造函数
+        constructor(text='human'){
+            //写属性
+            this.name=text
+        }
+        getName(){
+            return `我是${this.name}`
+        }
+    }
+    //当前这个类继承 Person
+    class SZ extends Person {
+        constructor(text){
+           //在继承时 constructor 构造函数需要添加super（）;
+            super(text);
+         //  this.name=text
+        }
+
+
+    }
+//    let  p=new Person('人类');
+//    console.log(p.getName());
+    let  sz=new SZ('深圳人2');
+    console.log(sz.getName());
+    /* es6之前
+    function Person() {
+        this.name='人类'
+        this.getName=function () {
+            return '我是'+this.name
+        }
+    }
+    var p=new Person();
+    console.log(p.name);
+    console.log(p.getName());
+    */
+</script>
+</body>
+</html>

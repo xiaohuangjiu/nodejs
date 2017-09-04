@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr=[1,2,3,4,5]
+    //箭头函数
+    // 1.减少编写量
+    // 2.如果只有一个参数时 可以不写小括号
+    // 3.如果只有一条代码可以不写大括号 ，会默认将其结果返回出来
+    // 4.如果无参数传递或者有个参数 必须要加上小括号
+    //定义一个一般的箭头函数
+    let  getName= (name)=>{
+      return '我是'+name;
+    };
+    let getName2=name2=>'我是'+name2;
+    console.log(getName('小小强'));
+    console.log(getName2('小强'));
+    //es6 //标准写法 箭头函数遍历
+    arr.forEach((item,index)=>{
+       // console.log('es6 arrow function','item:',item,'index:',index);
+    });
+    //变形的写法 如果只有一个参数
+    arr.forEach(item=>{
+        //console.log('es6 arrow function 变形1','item:',item);
+    });
+    arr.forEach(item=>console.log('es6 arrow function 变形2','item:',item));
+    //以前来定义 方法
+
+    arr.forEach(function (item,index) {
+      //  console.log('item:',item,'index:',index);
+    })
+</script>
+</body>
+</html>
